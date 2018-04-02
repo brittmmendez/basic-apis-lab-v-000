@@ -10,6 +10,8 @@ class RepositoriesController < ApplicationController
     end
 
     body_hash= JSON.parse(resp.body)
+    @results = body["items"]
+    render :search
   end
 
 end
