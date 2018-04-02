@@ -8,6 +8,8 @@ class RepositoriesController < ApplicationController
       req.params['q'] = params[:query]
       render 'search'
     end
+
+    body_hash= JSON.parse(resp.body)
   end
 
 end
